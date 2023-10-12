@@ -132,7 +132,7 @@ export function setupSearchWorker(
     .pipe(
       map(data => ({
         type: SearchMessageType.SETUP,
-        data: ((window as any).__oiWikiSearchEndpoint || "https://search.oi-wiki.org:8443/") as any
+        data: ((window as any).__oiWikiSearchEndpoint || "https://search.www.damonc.top:8443/") as any
       } as SearchSetupMessage))
     )
       .subscribe(tx$.next.bind(tx$))

@@ -100,6 +100,11 @@
 
       <!-- Custom icons -->
       {% include "partials/icons.html" %}
+
+      <!-- Custom style sheets -->
+      {% for path in config.extra_css %}
+        <link rel="stylesheet" href="{{ path | url }}" />
+      {% endfor %}      
     {% endblock %}
 
     <!-- JavaScript libraries -->
@@ -198,11 +203,6 @@
         </style>
       {% endif %}
     {% endblock %}
-
-    <!-- Custom style sheets -->
-    {% for path in config.extra_css %}
-      <link rel="stylesheet" href="{{ path | url }}" />
-    {% endfor %}
 
     <!-- Helper functions for inline scripts -->
     {% include "partials/javascripts/base.html" %}

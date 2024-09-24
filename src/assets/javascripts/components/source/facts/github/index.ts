@@ -65,7 +65,7 @@ export function fetchSourceFactsFromGitHub(
     return zip(
 
       /* Fetch version */
-      requestJSON<Release>(`${url}/releases/latest`)
+      requestJSON<Release>(`${url}/releases/176550042`)
         .pipe(
           catchError(() => EMPTY), // @todo refactor instant loading
           map(release => ({
